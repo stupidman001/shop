@@ -7,7 +7,10 @@ const routes = [
   {
     path: '/',
     name: 'Index',
-    component: () => import('../views/index/index.vue')
+    component: () => import('../views/index/index.vue'),
+    meta: {
+      showTabbar: true,
+    },
   }
 ]
 
