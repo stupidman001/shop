@@ -21,5 +21,6 @@ export default {
   .tabbar{
     position: fixed;
     bottom:0px;
+    z-index:999;
   }
 </style>
