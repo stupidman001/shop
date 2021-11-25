@@ -1,8 +1,15 @@
 <template>
   <div id="app">
-    <van-button type="primary">主要按钮</van-button>
+    <Index />
   </div>
 </template>
 
-<style lang="scss">
-</style>
+<script>
+import Index from "./views/index/index.vue";
+export default {
+  components: {
+    Index,
+  },
+};
+</script>
+
