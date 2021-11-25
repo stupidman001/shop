@@ -6,6 +6,11 @@ import store from './store'
 // 引入 vant 
 import '@/vantui'
 
+// 引入 vue-axios axios
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
+
 Vue.config.productionTip = false
 
 new Vue({

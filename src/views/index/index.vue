@@ -1,12 +1,12 @@
 <template>
   <div>
-
     <!-- 顶部搜索框 -->
     <van-search
       v-model="searchValue"
       shape="round"
       background="#fff"
       placeholder="请输入搜索关键词"
+      @blur="fun"
     />
 
     <!-- 轮播图 -->
@@ -18,12 +18,12 @@
 
     <!-- 标签页切换 -->
     <van-tabs v-model="active">
-      <van-tab v-for="(item,index) in tabs" :key="index">
+      <van-tab v-for="(item, index) in tabs" :key="index">
         <template #title> <van-icon :name="item.icon" />选项 </template>
         {{ item.type }}
       </van-tab>
     </van-tabs>
-
+    {{categories}}
   </div>
 </template>
 
@@ -39,31 +39,39 @@ export default {
         "https://img01.yzcdn.cn/vant/apple-2.jpg",
       ],
       // tab 切换
-      tabs:[
-          {
-              icon:'goods-collect',
-              type:'全部'
-          },
-          {
-              icon:'wap-home',
-              type:'生活'
-          },
-          { 
-              icon:'goods-collect',
-              type:'服装'
-          },
-          { 
-              icon:'gift',
-              type:'食品'
-          },
-          { 
-              icon:'service',
-              type:'数码'
-          }
+      tabs: [
+        {
+          icon: "goods-collect",
+          type: "全部",
+        },
+        {
+          icon: "wap-home",
+          type: "生活",
+        },
+        {
+          icon: "goods-collect",
+          type: "服装",
+        },
+        {
+          icon: "gift",
+          type: "食品",
+        },
+        {
+          icon: "service",
+          type: "数码",
+        },
       ],
-      active:0
+      active: 0,
+      categories:[]
     };
-  }
+  },
+  methods: {
+    fun() {
+      this.axios.get('https://api.shop.eduwork.cn/api/index').then((response) => {
+        this.categories = response.data.categories
+      });
+    },
+  },
 };
 </script>
 

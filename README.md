@@ -7,4 +7,5 @@ module.exports = {
     publicPath: './'
 }
 ```
-3. 
+3. HbuilderX 中 发行 - 原生App云打包 - 使用云端证书 - 传统打包
+4. 打包后的 apk 可以在 QQ浏览器中下载
