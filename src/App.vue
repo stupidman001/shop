@@ -12,9 +12,6 @@ export default {
   components: {
     Index,
     bottomTabbar
-  },
-  created(){
-    console.log(this.$route)
   }
 };
 </script>

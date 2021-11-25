@@ -60,7 +60,8 @@ export default {
               icon:'service',
               type:'数码'
           }
-      ]   
+      ],
+      active:0
     };
   }
 };

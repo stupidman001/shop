@@ -11,6 +11,11 @@ const routes = [
     meta: {
       showTabbar: true,
     },
+  },
+  {
+    path: '/publish',
+    name: 'Publish',
+    component: () => import('../views/publish/publish.vue'),
   }
 ]
 
