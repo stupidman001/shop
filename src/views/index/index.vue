@@ -7,7 +7,6 @@
         shape="round"
         background="#fff"
         placeholder="请输入搜索关键词"
-        @blur="fun"
       />
     </div>
 
@@ -22,15 +21,19 @@
     <van-tabs v-model="active" class="tabs">
       <van-tab v-for="(item, index) in tabs" :key="index">
         <template #title> <van-icon :name="item.icon" />选项 </template>
-        {{ item.type }}
       </van-tab>
     </van-tabs>
-    {{ categories }}
+
+    <Card />
   </div>
 </template>
 
 <script>
+import Card from "@/components/Card.vue"
 export default {
+  components:{
+    Card
+  },
   data() {
     return {
       // 搜索框内容
@@ -67,15 +70,7 @@ export default {
       categories: [],
     };
   },
-  methods: {
-    fun() {
-      this.axios
-        .get("https://api.shop.eduwork.cn/api/index")
-        .then((response) => {
-          this.categories = response.data.categories;
-        });
-    },
-  },
+  methods: {},
 };
 </script>
 
@@ -83,12 +78,12 @@ export default {
 // 搜索框置顶
 .search {
   position: fixed;
-  top:0px;
-  z-index:999;
-  width:100%;
+  top: 0px;
+  z-index: 999;
+  width: 100%;
 }
-.showSwipe{
-  margin-top:54px;
+.showSwipe {
+  margin-top: 54px;
 }
 img {
   width: 100%;

@@ -23,6 +23,8 @@ import {
     Divider,
     Grid, 
     GridItem,
+    List,
+    Tag 
 } from 'vant';
 
 Vue.use(Button);
@@ -47,3 +49,5 @@ Vue.use(VanImage);
 Vue.use(Divider);
 Vue.use(Grid);
 Vue.use(GridItem);
+Vue.use(List);
+Vue.use(Tag);

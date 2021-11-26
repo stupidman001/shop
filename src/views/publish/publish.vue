@@ -53,6 +53,7 @@
         show-word-limit
       />
     </van-cell-group>
+    <van-button type="primary" size="large" plain color="rgb(0, 0, 0)">发布商品</van-button>
   </div>
 </template>
 
