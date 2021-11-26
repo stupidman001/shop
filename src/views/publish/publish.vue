@@ -3,9 +3,6 @@
     <!-- 上边栏操作区 -->
     <van-nav-bar
       title="省心卖"
-      left-text="返回"
-      left-arrow
-      @click-left="$router.push('/')"
     />
     <van-cell-group>
       <!-- 商品名称 -->

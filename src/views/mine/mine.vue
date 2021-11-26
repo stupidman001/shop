@@ -1,15 +1,14 @@
 <template>
   <div>
-      个人中心
+    <personInfo />
   </div>
 </template>
 
 <script>
+import personInfo from "@/components/personInfo.vue"
 export default {
-
-}
+  components:{
+    personInfo
+  }
+};
 </script>
-
-<style>
-
-</style>

@@ -18,8 +18,13 @@ import {
     Picker,
     Uploader,
     Area,
-    NavBar 
+    NavBar,
+    Image as VanImage,
+    Divider,
+    Grid, 
+    GridItem,
 } from 'vant';
+
 Vue.use(Button);
 Vue.use(Search)
 Vue.use(Swipe)
@@ -38,3 +43,7 @@ Vue.use(Picker);
 Vue.use(Uploader);
 Vue.use(Area);
 Vue.use(NavBar);
+Vue.use(VanImage);
+Vue.use(Divider);
+Vue.use(Grid);
+Vue.use(GridItem);
