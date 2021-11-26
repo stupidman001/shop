@@ -12,7 +12,13 @@ import {
     Tabbar,
     TabbarItem,
     Field,
-    CellGroup
+    Cell,
+    CellGroup,
+    Popup,
+    Picker,
+    Uploader,
+    Area,
+    NavBar 
 } from 'vant';
 Vue.use(Button);
 Vue.use(Search)
@@ -25,4 +31,10 @@ Vue.use(Icon);
 Vue.use(Tabbar);
 Vue.use(TabbarItem);
 Vue.use(Field);
+Vue.use(Cell);
 Vue.use(CellGroup);
+Vue.use(Popup);
+Vue.use(Picker);
+Vue.use(Uploader);
+Vue.use(Area);
+Vue.use(NavBar);
