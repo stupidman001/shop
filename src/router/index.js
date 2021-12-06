@@ -9,6 +9,7 @@ const routes = [{
 		component: () => import('../views/index/index.vue'),
 		meta: {
 			showTabbar: true,
+			keepAlive: true
 		},
 	},
 	{
@@ -41,6 +42,9 @@ const routes = [{
 		path: '/detail',
 		name: 'Detail',
 		component: () => import('../views/Detail/Detail.vue'),
+		meta: {
+			keepAlive:true
+		},
 	}
 
 ]

@@ -1,6 +1,14 @@
 <template>
   <div id="app">
-    <router-view />
+
+    <!-- 被缓存 -->
+    <keep-alive>
+      <router-view v-if="$route.meta.keepAlive"> </router-view>
+    </keep-alive>
+
+    <!-- 不被缓存 -->
+    <router-view v-if="!$route.meta.keepAlive"> </router-view>
+
     <bottomTabbar v-if="$route.meta.showTabbar" />
   </div>
 </template>
