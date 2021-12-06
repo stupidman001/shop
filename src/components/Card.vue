@@ -44,7 +44,7 @@ export default {
 
 <style lang="scss" scoped>
 #card {
-  padding:10px;
+  padding:5px;
   display: flex;
   flex-direction: column;
   width: 170px;
