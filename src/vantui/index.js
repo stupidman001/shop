@@ -28,7 +28,8 @@ import {
 	Form,
     GoodsAction, 
     GoodsActionIcon, 
-    GoodsActionButton
+    GoodsActionButton,
+    Card 
 } from 'vant';
 
 Vue.use(Button);
@@ -59,3 +60,4 @@ Vue.use(Form);
 Vue.use(GoodsAction);
 Vue.use(GoodsActionButton);
 Vue.use(GoodsActionIcon);
+Vue.use(Card);

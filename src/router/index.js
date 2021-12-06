@@ -45,6 +45,14 @@ const routes = [{
 		meta: {
 			keepAlive:true
 		},
+	},
+	{
+		path: '/collection',
+		name: 'Collection',
+		component: () => import('../views/collection/collection.vue'),
+		meta: {
+			keepAlive:true
+		},
 	}
 
 ]
