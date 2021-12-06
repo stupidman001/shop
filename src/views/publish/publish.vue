@@ -24,14 +24,14 @@
         />
       </van-popup>
       <!-- 上传图片 -->
-      <div style="paddingLeft: 16px;fontSize: 14px">
-        <span>商品图片:(商品图片上传)</span>
-        <div>
+      <div style="paddingLeft: 16px;fontSize: 14px;paddingTop:10px">
+        <span>商品图片：<span style="fontSize:12px;fontWeight:100">(最多5张)</span></span>
+        <div style="paddingTop:10px;">
           <van-uploader v-model="fileList" multiple :max-count="5" />
         </div>
       </div>
       <!-- 价格 -->
-      <van-field v-model="value" label="售价" placeholder="出售价格" />
+      <van-field v-model="prince" label="售价" placeholder="出售价格" />
       <!-- 原价 -->
       <van-field label="原价" :value="originalPrice" />
 
@@ -90,7 +90,9 @@ export default {
       originalPrice: "",
       message: "",
       areaList,
-      showAddress:false
+      showAddress:false,
+      // 商品的价格
+      prince:""
     };
   },
   methods: {

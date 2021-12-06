@@ -8,7 +8,7 @@
 
     <!-- 不被缓存 -->
     <router-view v-if="!$route.meta.keepAlive"> </router-view>
-
+    <!-- 页面是否显示 tabbar -->
     <bottomTabbar v-if="$route.meta.showTabbar" />
   </div>
 </template>

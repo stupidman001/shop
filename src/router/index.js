@@ -43,7 +43,7 @@ const routes = [{
 		name: 'Detail',
 		component: () => import('../views/Detail/Detail.vue'),
 		meta: {
-			keepAlive:true
+			keepAlive: true
 		},
 	},
 	{
@@ -51,10 +51,9 @@ const routes = [{
 		name: 'Collection',
 		component: () => import('../views/collection/collection.vue'),
 		meta: {
-			keepAlive:true
+			keepAlive: true
 		},
 	}
-
 ]
 
 const router = new VueRouter({
