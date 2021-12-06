@@ -14,10 +14,6 @@
       <div style="flex:15; paddingLeft:20px; fontsize:20px;lineHeight:64px">
         <span>{{ username }}</span>
       </div>
-      <!-- 箭头 -->
-      <div style="flex: 1;lineHeight:64px">
-        <van-icon name="arrow" color="rgb(150, 151, 153)" />
-      </div>
     </div>
 </template>
 
