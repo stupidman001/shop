@@ -9,33 +9,38 @@
       <van-cell is-link @click="message">我的消息</van-cell>
       <van-cell is-link @click="feedback">意见反馈</van-cell>
     </div>
-
+    <!-- 校园地图 -->
+    <img
+      src="@/assets/img/map.jpg"
+      alt="黑龙江大学地图"
+      style="width: 100%"
+      @click="checkImg"
+    />
   </div>
 </template>
 
 <script>
-import personInfo from "@/components/personInfo.vue"
+import personInfo from "@/components/personInfo.vue";
+import { ImagePreview } from "vant";
 export default {
-  components:{
-    personInfo
+  components: {
+    personInfo,
   },
-  methods:{
+  methods: {
     // 发布
-    release(){
-      
-    },
+    release() {},
     // 收藏
-    collect(){
-      this.$router.push('/collection')
+    collect() {
+      this.$router.push("/collection");
     },
     // 消息
-    message(){
-
-    },
+    message() {},
     // 意见反馈
-    feedback(){
-
-    }
-  }
+    feedback() {},
+    // 点击放大图片
+    checkImg() {
+      ImagePreview(["../../"]);
+    },
+  },
 };
 </script>

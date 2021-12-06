@@ -17,14 +17,14 @@
       </div>
 
       <!-- 商品的详细信息 -->
-      <div>
+      <div style="color: red">
         <span>现价:</span>
         ￥{{ price }}
       </div>
 
       <div>
         <span>原价:</span>
-        ￥{{ orginalPrice }}
+        ￥<i style="text-decoration: line-through">{{ orginalPrice }}</i>
       </div>
 
       <div>
@@ -41,8 +41,7 @@
     <img src="" alt="" />
 
     <!-- 为你推荐 -->
-    <div class="recommend">
-      <van-icon name="gem-o" color="red" />为你推荐</div>
+    <div class="recommend"><van-icon name="gem-o" color="red" />为你推荐</div>
     <orderList :cards="cards" />
 
     <!-- 下边栏购买操作 -->
@@ -98,10 +97,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="scss">
 img {
   width: 100%;
   height: 100%;
+}
+span {
+  font-size: 12px;
+  font-weight: 100;
 }
 .back {
   position: fixed;
@@ -110,10 +113,14 @@ img {
 }
 .productInfo {
   margin-top: 50px;
+  padding-left: 10px;
+  div {
+    margin-bottom: 5px;
+  }
 }
 
 /* 商品推荐文案 */
-.recommend{
+.recommend {
   text-align: center;
 }
 </style>
