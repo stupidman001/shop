@@ -19,8 +19,7 @@
           show-toolbar
           :columns="typeColumns"
           @confirm="onConfirm"
-          @cancel="onCancel"
-          @change="onChange"
+          @cancel="showType = false"
         />
       </van-popup>
       <!-- 上传图片 -->
@@ -33,10 +32,10 @@
       <!-- 价格 -->
       <van-field v-model="prince" label="售价" placeholder="出售价格" />
       <!-- 原价 -->
-      <van-field label="原价" :value="originalPrice" />
+      <van-field label="原价" :value="originalPrice" placeholder="商品原价" />
 
       <!-- 选择售出地址 -->
-      <van-cell is-link @click="showPopup">出售地址</van-cell>
+      <van-cell is-link @click="checkAddress">出售地址</van-cell>
       <van-popup v-model="showAddress" position="bottom" :style="{ height: '30%' }">
         <van-area title="黑龙江大学" :area-list="areaList" />
       </van-popup>
@@ -103,12 +102,6 @@ export default {
     onConfirm(value, index) {
       Toast(`当前值：${value}, 当前索引：${index}`);
     },
-    onChange(picker, value, index) {
-      Toast(`当前值：${value}, 当前索引：${index}`);
-    },
-    onCancel() {
-      Toast("取消");
-    },
     // 分类选择完毕
 
     // 图片上传
@@ -116,6 +109,10 @@ export default {
       // 此时可以自行将文件上传至服务器
       console.log(file);
     },
+    // 选择 出售地址
+    checkAddress(){
+      this.showAddress = true
+    }
   },
 };
 </script>
