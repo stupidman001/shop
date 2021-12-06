@@ -1,6 +1,6 @@
 <template>
   <div id="order_list">
-    <Card v-for="(item, index) in cards" :key="index" />
+    <Card v-for="(item, index) in cards" :key="index" @click.native="checkDetail" />
   </div>
 </template>
 
@@ -11,6 +11,11 @@ export default {
     Card,
   },
   props: ["cards"],
+  methods: {
+    checkDetail() {
+      this.$router.push('/detail')
+    },
+  },
 };
 </script>
 
@@ -20,7 +25,7 @@ export default {
   align-content: space-between;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding:5px;
-  padding-bottom:50px;
+  padding: 5px;
+  padding-bottom: 50px;
 }
 </style>

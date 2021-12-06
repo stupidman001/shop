@@ -25,7 +25,10 @@ import {
     GridItem,
     List,
     Tag,
-	Form 
+	Form,
+    GoodsAction, 
+    GoodsActionIcon, 
+    GoodsActionButton
 } from 'vant';
 
 Vue.use(Button);
@@ -53,3 +56,6 @@ Vue.use(GridItem);
 Vue.use(List);
 Vue.use(Tag);
 Vue.use(Form);
+Vue.use(GoodsAction);
+Vue.use(GoodsActionButton);
+Vue.use(GoodsActionIcon);
